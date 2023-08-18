@@ -33,7 +33,8 @@ func forwardRequest(res http.ResponseWriter ,req *http.Request) {
 }
 
 func getServer() *url.URL{
-	url, _ := url.Parse(serverList[(lastServedIndex+1)%5]) //make sure range is always 5
-	lastServedIndex ++ 
+	nextIndex := (lastServedIndex+1)%5
+	url, _ := url.Parse(serverList[lastServedIndex]) //make sure range is always 5
+	lastServedIndex = nextIndex
 	return url
 }

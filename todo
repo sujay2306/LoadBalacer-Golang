@@ -1,6 +1,0 @@
-Lets build a LB
-
-- Http server (5) we will be having 5 servers
-- Load Balancer:
-    - strategy: Round_robin
-
